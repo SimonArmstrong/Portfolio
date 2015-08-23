@@ -10,6 +10,7 @@ $(document).ready(function(){
 	$("#Ninjiblink").hide();
 	$("#overworldlink").hide();
 	document.getElementById("center-page").style.height = window.innerHeight - 150;
+	document.getElementById("center-page").style.width = window.innerWidth - 16;
 	document.getElementById("GamesandWeb").style.height = window.innerHeight - 150;
 	
     $("#asteroids").mouseenter(function(){
