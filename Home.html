@@ -1,45 +1,93 @@
 <HTML>
 	<head>
+	<head>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-		<title>SIMON ARMSTRONG</title>
+		<title>Simon Armstrong</title>
 		<script src="jquery-1.11.3.min.js"></script>
+		<script src="blur.js"></script>
 		<script type="text/javascript" src="script.js"></script>
+		<link rel="shortcut icon" href="bg.ico">
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div id="header" align="center">
-			<table>
-			<tr>
-				<td><h1>SIMON ARMSTRONG</h1></td>
-			</tr>
-			</table>
+			<div class="fb-like" data-href="https://www.facebook.com/pages/Simon-Armstrong/1689728291238590" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
 		
+		<b><P id="games" align="center">GAMES</p></b>
 		<div id="main" align = "center">
 			<table>
-				<th colspan="3">GAMES</th>
+				<th colspan="3"></th>
 				<tr>
 					<td>
-						<div id="r1c1"><a href="http://simonarmstrong.github.io/Asteroids/Asteroids/" target="blank"><img src="asteroids.png" id="asteroids"></img></a></div>
+						<div id="r1c1" align="center"><div><img src="asteroids.png" id="asteroids"></img></div>
+						<a href="http://simonarmstrong.github.io/Asteroids/Asteroids/" target="blank" id="asteroidslink">
+							<img src="play.png" align="center"></img><p id="title">ASTEROIDS</p>
+						</a>
+						
+						</div>
 					</td>
 					<td>
-						<div id="r1c2"><a href="http://simonarmstrong.github.io/PlatformerCertificate/" target="blank"><img src="platformer.png" id="platformer"></img></a></div>
+						<div id="r1c2" align="center"><div><img src="platformer.png" id="platformer"></img></div>
+						<a href="http://simonarmstrong.github.io/PlatformerCertificate" target="blank" id="platformerlink">
+							<img src="play.png" align="center"></img><p id="title">PLATFORMER</p>
+						</a>
+						
+						</div>
 					</td>
 					<td>
-						<div id="r1c3"><a href="http://simonarmstrong.github.io/NinjibTile" target="blank"><img src="RPG.png" id="Ninjib"></img></a></div>
+						<div id="r1c3" align="center"><div><img src="RPG.png" id="Ninjib"></img></div>
+						<a href="http://simonarmstrong.github.io/NinjibTile/" target="blank" id="Ninjiblink">
+							<img src="play.png" align="center"></img>
+							<p id="title">ENDLESS RPG</p>
+						</a>
+						</div>
 					</td>
 				</tr>
 			</table>
 			<table>
 				<tr>
 					<td>
-						<div id="r2c1"><a href="http://simonarmstrong.github.io/Overworld-0.1" target="blank"><img src="Overworld.png" id="overworld"></img></a></div>
+						<div id="r2c1" align="center"><div><img src="Overworld.png" id="overworld"></img></div>
+						<a href="http://simonarmstrong.github.io/Overworld-0.1" target="blank" id="overworldlink">
+							<img src="play.png" align="center"></img>
+							<p id="title">OVERWORLD</p>
+						</a>
+						</div>
 					</td>
 				<tr>
 			</table>
 		</div>
+		<div id="sliderButton" align="center">
+			<img src="slidebuttondown.png" id="slidebutton-down"></img>
+			<img src="slidebuttonup.png" id="slidebutton-up"></img>
+		</div>
+		<div id="center-page" align="center">
+			<img align="center" src="GamesandWeb.png" id="GamesandWeb"></img>
+		</div>
 	</body>
 	<footer>
 	<div align = "center">
-		<p>Copyright Simon Armstrong, 2015~</P>
+		<img src="slidebuttonup.png" id="showabout-up"></img>
+		<img src="slidebuttondown.png" id="showabout-down"></img>
+		<b><P id="abouttxt" align="center">ABOUT</p></b>
+		<div align="center" id="info">
+			<p>I'm Simon Armstrong. I'm an aspiring developer from Sydney, Australia currently doing my HSC.</p>
+			<p>I've designed this website to showcase some of my skills in computer programming.</p>
+			<u><b><p>CONTACT INFORMATION</p></b></u>
+			<p>Email: sa.creativemedia@gmail.com</p>
+			<p>Phone: +61 448 238 692</p>
+			<p>Location: Sydney, Australia</p>
+			<p>_______________________________________________________________________</p>
+			<p>Copyright Simon Armstrong 2015</p>
+			<div class="fb-like" data-href="https://www.facebook.com/pages/Simon-Armstrong/1689728291238590" data-width="72" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		</div>
 	</footer>
 </HTML>

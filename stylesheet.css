@@ -21,7 +21,7 @@ table {
 }
 
 body {
-	 background-color : #ffffff
+	 background-color : #f2f2f2
 }
 
 #r1c1{
@@ -38,4 +38,18 @@ body {
 
 #r2c1{
 	background-color : #000000;
+}
+
+a {
+	font-family : 16px Verdana;
+	color : #fff;
+}
+
+#center-page {
+	background-image : url("");
+	background-color : #ffffff;
+}
+
+#title {
+	color : #ffffff;
 }
