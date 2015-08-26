@@ -1,4 +1,6 @@
 var selected = "";
+var aboutTabOpen = false;
+var gamesTabOpen = false;
 
 $(document).ready(function(){
 	$("#main").hide();
@@ -16,6 +18,7 @@ $(document).ready(function(){
 		$("#r1c1").fadeTo('fast', 0.8);
 	});
 	$("#slidebutton-down").click(function(){
+		gamesTabOpen = true;
 		$("#main").slideDown(400);
 		$("#center-page").animate({
 			height : "-=417px"
@@ -25,13 +28,9 @@ $(document).ready(function(){
 		});
 		$("#slidebutton-down").hide();
 		$("#slidebutton-up").show();
-		$("#abouttxt").blurjs({
-			source : 'body',
-			radius : 10,
-			overlay: 'rgba(255,255,255,0.4)'
-		});
 	});
 	$("#slidebutton-up").click(function(){
+		gamesTabOpen = false;
 		$("#main").slideUp(400);
 		$("#center-page").animate({
 			height : "+=417px"
@@ -44,6 +43,7 @@ $(document).ready(function(){
 	});
 	
 	$("#showabout-down").click(function(){
+		aboutTabOpen = false;
 		$("#center-page").animate({
 			height : "+=400px"
 		});
@@ -55,6 +55,7 @@ $(document).ready(function(){
 		$("#info").hide();
 	});
 	$("#showabout-up").click(function(){
+		aboutTabOpen = true;
 		$("#center-page").animate({
 			height : "-=400px"
 		}, function(){
@@ -75,10 +76,11 @@ $(document).ready(function(){
 			$("#r1c1").animate({
 				height : '-=250px',
 				width : '-=250px'
+			}, function(){
+				selected = "";
 			});
 			$("#asteroidslink").hide();
 			$("#asteroids").fadeTo('slow', 1);
-			selected = "";
 		} else if (selected === "" && $(this).height() <= 200){
 			$("#r1c1").animate({
 				height : '+=250px',
@@ -100,8 +102,9 @@ $(document).ready(function(){
 			$("#r1c2").animate({
 				height : '-=250px',
 				width : '-=250px'
+			}, function(){
+				selected = "";
 			});
-			selected = "";
 			$("#platformerlink").hide();
 			$("#platformer").fadeTo('slow', 1);
 		} else if(selected === "" && $(this).height() <= 200) {
@@ -125,8 +128,9 @@ $(document).ready(function(){
 			$("#r1c3").animate({
 				height : '-=250px',
 				width : '-=250px'
+			}, function(){
+				selected = "";
 			});
-			selected = "";
 			$("#Ninjiblink").hide();
 			$("#Ninjib").fadeTo('slow', 1);
 		} else if(selected === "" && $(this).height() <= 200) {
@@ -149,8 +153,9 @@ $(document).ready(function(){
 		if($("#r2c1").height() >= 450){
 			$("#r2c1").animate({
 				height : '-=250px'
+			}, function(){
+				selected = "";
 			});
-			selected = "";
 			$("#overworldlink").hide();
 			$("#overworld").fadeTo('slow', 1);
 		} else if(selected === "" && $(this).height() <= 200) {
@@ -162,3 +167,54 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function onWindowResize()
+{
+	if(aboutTabOpen){
+		$("#center-page").animate({
+			height : "+=400px"
+		});
+		$("#GamesandWeb").animate({
+			height : "+=400px"
+		}, function(){
+			document.getElementById("center-page").style.height = window.innerHeight - 150;
+			document.getElementById("center-page").style.width = window.innerWidth - 16;
+			document.getElementById("GamesandWeb").style.height = window.innerHeight - 150;
+		});
+		$("#showabout-down").hide();
+		$("#showabout-up").show();
+		$("#info").hide();
+		aboutTabOpen = false;
+	}
+	else
+	{
+		document.getElementById("center-page").style.height = window.innerHeight - 150;
+		document.getElementById("center-page").style.width = window.innerWidth - 16;
+		document.getElementById("GamesandWeb").style.height = window.innerHeight - 150;
+	}
+	
+	if(gamesTabOpen){
+		$("#main").slideUp(400);
+		$("#center-page").animate({
+			height : "+=417px"
+		});
+		$("#GamesandWeb").animate({
+			height : "+=417px"
+		}, function(){
+			document.getElementById("center-page").style.height = window.innerHeight - 150;
+			document.getElementById("center-page").style.width = window.innerWidth - 16;
+			document.getElementById("GamesandWeb").style.height = window.innerHeight - 150;
+		});
+		$("#slidebutton-up").hide();
+		$("#slidebutton-down").show();
+		gamesTabOpen = false;
+	}
+	else
+	{
+		document.getElementById("center-page").style.height = window.innerHeight - 150;
+		document.getElementById("center-page").style.width = window.innerWidth - 16;
+		document.getElementById("GamesandWeb").style.height = window.innerHeight - 150;
+	}
+}
+
+window.addEventListener('resize', onWindowResize);

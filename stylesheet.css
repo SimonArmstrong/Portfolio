@@ -43,6 +43,12 @@ body {
 a {
 	font-family : 16px Verdana;
 	color : #fff;
+	text-decoration : none;
+}
+
+#gitLink {
+	font-family : Trebuchet MS;
+	color : #888888;
 }
 
 #center-page {
