@@ -89,6 +89,9 @@ $(document).ready(function(){
 			});
 			selected = this;
 			$("#asteroidslink").fadeTo('slow', 1.0);
+			$("#GamesandWeb").animate({
+				height : "-=125px"
+			});
 		}
 	});
 	
