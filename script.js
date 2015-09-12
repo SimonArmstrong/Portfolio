@@ -82,6 +82,12 @@ $(document).ready(function(){
 			});
 			$("#asteroidslink").hide();
 			$("#asteroids").fadeTo('slow', 1);
+			$("#GamesandWeb").animate({
+				height : "+=250px"
+			});
+			$("#center-page").animate({
+				height : "+=250px"
+			});
 		} else if (selected === "" && $(this).height() <= 200){
 			$("#r1c1").animate({
 				height : '+=250px',
