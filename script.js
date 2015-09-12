@@ -92,15 +92,16 @@ $(document).ready(function(){
 			$("#r1c1").animate({
 				height : '+=250px',
 				width : '+=250px'
+			}, function(){
+				$("#asteroidslink").fadeTo('slow', 1.0);
+				$("#GamesandWeb").animate({
+					height : "-=250px"
+				});
+				$("#center-page").animate({
+					height : "-=250px"
+				});
 			});
 			selected = this;
-			$("#asteroidslink").fadeTo('slow', 1.0);
-			$("#GamesandWeb").animate({
-				height : "-=250px"
-			});
-			$("#center-page").animate({
-				height : "-=250px"
-			});
 		}
 	});
 	
