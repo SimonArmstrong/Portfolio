@@ -79,12 +79,6 @@ $(document).ready(function(){
 				width : '-=250px'
 			}, function(){
 				selected = "";
-				$("#GamesandWeb").animate({
-					height : "+=250px"
-				});
-				$("#center-page").animate({
-					height : "+=250px"
-				});
 			});
 			$("#asteroidslink").hide();
 			$("#asteroids").fadeTo('slow', 1);
@@ -92,16 +86,9 @@ $(document).ready(function(){
 			$("#r1c1").animate({
 				height : '+=250px',
 				width : '+=250px'
-			}, function(){
-				$("#asteroidslink").fadeTo('slow', 1.0);
-				$("#GamesandWeb").animate({
-					height : "-=250px"
-				});
-				$("#center-page").animate({
-					height : "-=250px"
-				});
 			});
 			selected = this;
+			$("#asteroidslink").fadeTo('slow', 1.0);
 		}
 	});
 	
@@ -121,12 +108,6 @@ $(document).ready(function(){
 			});
 			$("#platformerlink").hide();
 			$("#platformer").fadeTo('slow', 1);
-			$("#GamesandWeb").animate({
-				height : "+=250px"
-			});
-			$("#center-page").animate({
-				height : "+=250px"
-			});
 		} else if(selected === "" && $(this).height() <= 200) {
 			$("#r1c2").animate({
 				height : '+=250px',
@@ -134,12 +115,6 @@ $(document).ready(function(){
 			});
 			selected = this;
 			$("#platformerlink").fadeTo('slow', 1.0);
-						$("#GamesandWeb").animate({
-				height : "-=250px"
-			});
-			$("#center-page").animate({
-				height : "-=250px"
-			});
 		}
 	});
 	
@@ -159,12 +134,6 @@ $(document).ready(function(){
 			});
 			$("#Ninjiblink").hide();
 			$("#Ninjib").fadeTo('slow', 1);
-			$("#GamesandWeb").animate({
-				height : "+=250px"
-			});
-			$("#center-page").animate({
-				height : "+=250px"
-			});
 		} else if(selected === "" && $(this).height() <= 200) {
 			$("#r1c3").animate({
 				height : '+=250px',
@@ -172,12 +141,6 @@ $(document).ready(function(){
 			});
 			selected = this;
 			$("#Ninjiblink").fadeTo('slow', 1.0);
-			$("#GamesandWeb").animate({
-				height : "-=250px"
-			});
-			$("#center-page").animate({
-				height : "-=250px"
-			});
 		}
 	});
 	
@@ -196,24 +159,12 @@ $(document).ready(function(){
 			});
 			$("#overworldlink").hide();
 			$("#overworld").fadeTo('slow', 1);
-			$("#GamesandWeb").animate({
-				height : "+=250px"
-			});
-			$("#center-page").animate({
-				height : "+=250px"
-			});
 		} else if(selected === "" && $(this).height() <= 200) {
 			$("#r2c1").animate({
 				height : '+=250px'
 			});
 			selected = this;
 			$("#overworldlink").fadeTo('slow', 1.0);
-			$("#GamesandWeb").animate({
-				height : "-=250px"
-			});
-			$("#center-page").animate({
-				height : "-=250px"
-			});
 		}
 	});
 });
