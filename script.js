@@ -79,15 +79,15 @@ $(document).ready(function(){
 				width : '-=250px'
 			}, function(){
 				selected = "";
+				$("#GamesandWeb").animate({
+					height : "+=250px"
+				});
+				$("#center-page").animate({
+					height : "+=250px"
+				});
 			});
 			$("#asteroidslink").hide();
 			$("#asteroids").fadeTo('slow', 1);
-			$("#GamesandWeb").animate({
-				height : "+=250px"
-			});
-			$("#center-page").animate({
-				height : "+=250px"
-			});
 		} else if (selected === "" && $(this).height() <= 200){
 			$("#r1c1").animate({
 				height : '+=250px',
