@@ -101,12 +101,6 @@ $(document).ready(function(){
 			$("#center-page").animate({
 				height : "-=250px"
 			});
-						$("#GamesandWeb").animate({
-				height : "-=250px"
-			});
-			$("#center-page").animate({
-				height : "-=250px"
-			});
 		}
 	});
 	
